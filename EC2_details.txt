@@ -1,0 +1,28 @@
+username@ip address : ubuntu@52.1.21.63
+
+Step 1 : save the .pem file in a folder 
+
+Step2 : open command line prompt, the prompt should be where the .pem file is and write the below command
+command line to access the ec2 : 
+ssh -i "Nuvr.pem" ubuntu@52.1.21.63
+
+Step 3 : Open Windows powershell and access to the folder where the Demo-Hygiene Data VX.xlsx file is using 'cd' command
+eg: 
+source file path :
+C:\folder path where the source file is saved
+
+Step 4: Transfer the data file from your local system to remote using the below scp command 
+scp command :
+scp -i "C:\Users\Gourav Nandy\Desktop\Career\freelance_projects\Nuvr\hygiene\Nuvr.pem" "C:\Users\Gourav Nandy\Desktop\Career\freelance_projects\Nuvr\hygiene\app.py" ubuntu@52.1.21.63:~/
+
+
+Come back to your command line prompt where you have accessed the ec2 server.
+STep 5: change the file name in the streamlit app by accesing the app using below command:
+sudo nano app.py
+
+Step 6:
+change V --> Ctrl + X --> y
+
+Step 7 : Run the below command in the command prompt 
+Nohup command: 
+nohup streamlit run app.py --server.address=0.0.0.0 > streamlit.log 2>&1 &
