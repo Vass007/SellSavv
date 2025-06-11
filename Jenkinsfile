@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', credentialsId: 'git_key', url: 'https://github.com/AdminVelesium/HS_Sellsavv.git'
+                git branch: 'master', credentialsId: 'sellsavv', url: 'https://github.com/maheevarma/SellSavv.git'
             }
         }
 
