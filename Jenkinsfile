@@ -39,6 +39,7 @@ pipeline {
         success {
             echo "App deployed successfully at http://<your-server-ip>:${APP_PORT}/"
         }
+        #this is latest#
         failure {
             echo 'Pipeline failed.'
         }
